@@ -1,7 +1,7 @@
-import RecipeList from "../../components/RecipeList/RecipeList";
+import TaskList from "../../components/TaskList/TaskList";
 
 function Home() {
-    return <RecipeList />;
+    return <TaskList />;
 }
 
 export default Home;
