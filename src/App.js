@@ -1,10 +1,13 @@
-import './App.css';
+import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
 
-export function App() {
-  return (
-    <>
-      <h1>Parcel React App</h1>
-      <p>Edit <code>src/App.tsx</code> to get started!</p>
-    </>
-  );
+function App() {
+    return (
+        <>
+            <Header />
+            <Home />
+        </>
+    );
 }
+
+export default App;
