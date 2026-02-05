@@ -21,25 +21,20 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  // Barvno kodiranje po kategorijah
-  &.Zajtrk {
+  &.Breakfast {
     border-left: 5px solid #ffcc00;
   }
 
-  &.Kosilo {
+  &.Lunch {
     border-left: 5px solid #00bfff;
   }
 
-  &.Večerja {
+  &.Dinner {
     border-left: 5px solid #ff6f61;
   }
 
-  &.Sladica {
-    border-left: 5px solid #ffa500; // oranžna
-  }
-
-  @media (min-width: 768px) {
-    width: 250px; // desktop/tablet širina
+  &.Dessert {
+    border-left: 5px solid #8e44ad;
   }
 }
 
