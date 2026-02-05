@@ -1,9 +1,8 @@
 import "./_recipecard.scss";
 
-
 function RecipeCard({ recipe }) {
     return (
-        <div className="recipe-card">
+        <div className={`recipe-card ${recipe.category}`}>
             <h3>{recipe.title}</h3>
             <p><strong>Kategorija:</strong> {recipe.category}</p>
             <p><strong>Čas priprave:</strong> {recipe.time} min</p>
@@ -14,3 +13,4 @@ function RecipeCard({ recipe }) {
 }
 
 export default RecipeCard;
+

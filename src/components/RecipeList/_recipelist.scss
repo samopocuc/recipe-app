@@ -1,6 +1,7 @@
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; // center grid
   gap: 16px;
+  margin-top: 16px;
 }
