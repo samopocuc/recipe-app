@@ -1,15 +1,4 @@
-@import "../general/variables";
-@import "../mixins/mixins";
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: $bg-color;
-  color: $text-color;
-  font-family: Arial, sans-serif;
-}
+@use "../general/reset";      // globalni reset
+@use "./_main";               // container, recipe-list, header
+@use "../general/variables";  // spremenljivke
+@use "../mixins/mixins";      // mixine

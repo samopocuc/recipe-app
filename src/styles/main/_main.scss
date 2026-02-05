@@ -1,0 +1,26 @@
+// Global container za aplikacijo
+.app-container {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+// Seznam kartic – center grid
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+// Header (če želiš global styling)
+.app-header {
+  background-color: #ff6f61;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
