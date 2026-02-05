@@ -7,6 +7,94 @@
       "time": 20,
       "ingredients": "moka, mleko, jajca",
       "instructions": "Zmešaj sestavine in speci palačinke."
+    },
+    {
+      "id": 2,
+      "title": "Ovseni kosmiči z medom",
+      "category": "Zajtrk",
+      "time": 5,
+      "ingredients": "ovseni kosmiči, mleko, med, oreščki",
+      "instructions": "Kosmiče prelij z mlekom, dodaj med in oreščke po okusu."
+    },
+    {
+      "id": 3,
+      "title": "Smoothie iz jagod",
+      "category": "Zajtrk",
+      "time": 10,
+      "ingredients": "jagode, banana, jogurt, med",
+      "instructions": "Vse sestavine zmešaj v mešalniku do gladke konsistence."
+    },
+    {
+      "id": 4,
+      "title": "Špageti s paradižnikovo omako",
+      "category": "Kosilo",
+      "time": 30,
+      "ingredients": "špageti, paradižnik, česen, olivno olje, bazilika",
+      "instructions": "Skuhaj špagete. Na olju prepraži česen, dodaj paradižnik in baziliko, prelij špagete."
+    },
+    {
+      "id": 5,
+      "title": "Solata s tuno",
+      "category": "Kosilo",
+      "time": 15,
+      "ingredients": "zelena solata, tuna v lastnem soku, paradižnik, kumare, oljčno olje",
+      "instructions": "Vse sestavine zmešaj v skledi in začini z oljem po okusu."
+    },
+    {
+      "id": 6,
+      "title": "Kremna bučna juha",
+      "category": "Kosilo",
+      "time": 25,
+      "ingredients": "buča, čebula, krompir, jušna osnova, smetana",
+      "instructions": "Vse sestavine skuhaj do mehke buče, zmiksaj in dodaj smetano."
+    },
+    {
+      "id": 7,
+      "title": "Piščančji curry",
+      "category": "Večerja",
+      "time": 40,
+      "ingredients": "piščanec, čebula, curry pasta, kokosovo mleko, riž",
+      "instructions": "Na olju prepraži čebulo in curry, dodaj piščanca, prelij s kokosovim mlekom, postrezi z rižem."
+    },
+    {
+      "id": 8,
+      "title": "Pečena zelenjava",
+      "category": "Večerja",
+      "time": 35,
+      "ingredients": "bučke, paprika, korenje, olivno olje, sol, poper",
+      "instructions": "Zelenjavo nareži, začini in peci na 200°C približno 30 minut."
+    },
+    {
+      "id": 9,
+      "title": "Losos na žaru",
+      "category": "Večerja",
+      "time": 25,
+      "ingredients": "losos, limona, olivno olje, sol, poper",
+      "instructions": "Lososa začini in peci na žaru ali ponvi, postrezi z limono."
+    },
+    {
+      "id": 10,
+      "title": "Jabolčni zavitek",
+      "category": "Sladica",
+      "time": 50,
+      "ingredients": "jabolka, listnato testo, sladkor, cimet",
+      "instructions": "Jabolka nareži, zmešaj s sladkorjem in cimetom, zavij v testo in peci."
+    },
+    {
+      "id": 11,
+      "title": "Čokoladni muffin",
+      "category": "Sladica",
+      "time": 30,
+      "ingredients": "moka, jajca, sladkor, maslo, kakav, čokoladni koščki",
+      "instructions": "Zmešaj sestavine, vlij v modelčke in peci pri 180°C 20-25 minut."
+    },
+    {
+      "id": 12,
+      "title": "Banana bread",
+      "category": "Sladica",
+      "time": 60,
+      "ingredients": "zrele banane, moka, jajca, sladkor, maslo, pecilni prašek",
+      "instructions": "Zmešaj sestavine, vlij v pekač in peci pri 180°C približno 50 minut."
     }
   ]
 }

@@ -1,12 +1,11 @@
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
+import RecipeList from "./components/RecipeList/RecipeList";
 
 function App() {
     return (
-        <>
-            <Header />
-            <Home />
-        </>
+        <div>
+            <h1>Moji recepti</h1>
+            <RecipeList />
+        </div>
     );
 }
 

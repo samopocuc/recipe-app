@@ -1,24 +1,28 @@
 import { useEffect, useState } from "react";
-import { getTasks } from "../../services/api"; // <--- tukaj
+import { getRecipes } from "../../services/api";
 
 function RecipeList() {
-    const [tasks, setTasks] = useState([]);
+    const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        getTasks().then(data => setTasks(data));
+        getRecipes()
+            .then(data => setRecipes(data))
+            .catch(err => console.error("Napaka pri pridobivanju receptov:", err));
     }, []);
 
     return (
         <div>
-            <h2>Recepti / Tasks</h2>
-            {tasks.map(task => (
-                <div key={task.id}>
-                    <h3>{task.title}</h3>
-                    <p>{task.category} • {task.time} min</p>
-                </div>
-            ))}
+            <h2>Seznam receptov</h2>
+            <ul>
+                {recipes.map(recipe => (
+                    <li key={recipe.id}>
+                        <strong>{recipe.title}</strong> ({recipe.category}) - {recipe.time} min
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }
 
 export default RecipeList;
+
