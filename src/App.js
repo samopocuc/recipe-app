@@ -1,12 +1,7 @@
-import RecipeList from "./components/RecipeList/RecipeList";
+import Home from "./components/Home/Home";
 
 function App() {
-    return (
-        <div>
-            <h1>Moji recepti</h1>
-            <RecipeList />
-        </div>
-    );
+    return <Home />;
 }
 
 export default App;
