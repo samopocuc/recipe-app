@@ -2,62 +2,31 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("../../assets/spices.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-  &__overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 32px;
-    border-radius: 0;
-    width: 100%;
-    max-width: 100%;
-  }
+.home__overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;  // pokrije cel zaslon
+  width: 100%;
+  padding: 32px;
+  background-color: transparent;
+}
 
-  &__title {
-    font-size: 2rem;
-    margin-bottom: 24px;
-
-    @media (min-width: 768px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  &__actions {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    button {
-      padding: 12px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #ff6f61;
-      color: #fff;
-
-      &:hover {
-        background-color: #e55b50;
-      }
-    }
-
-    @media (min-width: 480px) {
-      flex-direction: row;
-      justify-content: center;
-
-      button {
-        min-width: 140px;
-      }
-    }
-  }
+.home__title {
+  color: #000;           // barva naslova
+  text-transform: uppercase;
+  font-weight: 900;       // maksimalno bold
+  font-size: 2rem;
+  text-align: center;     // horizontalno centriran
+  margin-bottom: 300px;   // prostor med naslovom in gumbi
 }
