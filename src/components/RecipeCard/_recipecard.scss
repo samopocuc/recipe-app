@@ -3,8 +3,8 @@
   border-radius: 8px;
   padding: 16px;
   margin: 8px;
-  width: 90%;          // mobilni-first
-  max-width: 260px;    // desktop
+  width: 90%;
+  max-width: 260px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -36,5 +36,8 @@
   &.Dessert {
     border-left: 5px solid #8e44ad;
   }
-}
 
+  @media (min-width: 768px) {
+    width: 250px;
+  }
+}

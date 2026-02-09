@@ -1,53 +1,63 @@
 .home {
+  position: relative;
+  width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../../assets/spices.jpg");
   background-size: cover;
   background-position: center;
-}
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 
-.home__overlay {
-  min-height: 100vh;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 48px;
-}
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+  }
 
-.home__title {
-  color: #fff;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  text-align: center;
-}
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 24px;
 
-.home__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
 
-.home__actions button {
-  padding: 14px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  min-width: 200px;
-}
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 
-.home__actions button:first-child {
-  background-color: #ffffff;
-  color: #333;
-}
+    button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #ff6f61;
+      color: #fff;
 
-.home__actions button:last-child {
-  background-color: #ff6f61;
-  color: #fff;
-}
+      &:hover {
+        background-color: #e55b50;
+      }
+    }
 
-@media (min-width: 768px) {
-  .home__title {
-    font-size: 2.6rem;
+    @media (min-width: 480px) {
+      flex-direction: row;
+      justify-content: center;
+
+      button {
+        min-width: 140px;
+      }
+    }
   }
 }

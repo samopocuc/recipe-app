@@ -1,14 +1,13 @@
 import "./_home.scss";
 
-function Home() {
+function Home({ setPage }) {
     return (
         <div className="home">
             <div className="home__overlay">
                 <h1 className="home__title">Recipe App</h1>
-
                 <div className="home__actions">
-                    <button>View Recipes</button>
-                    <button>Add Recipe</button>
+                    <button onClick={() => setPage("recipes")}>View Recipes</button>
+                    <button onClick={() => setPage("add")}>Add Recipe</button>
                 </div>
             </div>
         </div>
@@ -16,4 +15,3 @@ function Home() {
 }
 
 export default Home;
-

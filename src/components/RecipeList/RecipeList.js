@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { getRecipes } from "../../services/api";
 import RecipeCard from "../RecipeCard/RecipeCard";
-import "../RecipeCard/_recipecard.scss"; // styling za kartico
-import "./_recipelist.scss"; // styling za seznam
+import "../RecipeCard/_recipecard.scss";
+import "./_recipelist.scss";
 
 function RecipeList() {
     const [recipes, setRecipes] = useState([]);
@@ -10,7 +10,7 @@ function RecipeList() {
     useEffect(() => {
         getRecipes()
             .then(data => setRecipes(data))
-            .catch(err => console.error("Napaka pri pridobivanju receptov:", err));
+            .catch(err => console.error("Error fetching recipes:", err));
     }, []);
 
     return (
@@ -23,3 +23,4 @@ function RecipeList() {
 }
 
 export default RecipeList;
+
