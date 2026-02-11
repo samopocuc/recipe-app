@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { deleteRecipe } from "../../services/api";
-import Buttons from "../Buttons/Buttons";
+import Buttons from "../../components/Buttons/Buttons";
 import "./_recipedetails.scss";
+import { deleteRecipe } from "../../services/api";
 
 function RecipeDetails({ recipeId, setPage }) {
     const [recipe, setRecipe] = useState(null);
@@ -12,18 +12,15 @@ function RecipeDetails({ recipeId, setPage }) {
             .then(setRecipe);
     }, [recipeId]);
 
-    const handleDelete = () => {
-        deleteRecipe(recipeId).then(() => {
-            setPage("recipes");
-        });
-    };
-
     if (!recipe) return <p>Loading...</p>;
+
+    const handleDelete = () => {
+        deleteRecipe(recipe.id).then(() => setPage("recipes"));
+    };
 
     return (
         <div className="recipe-details">
             <h1>{recipe.title}</h1>
-
             <div className="recipe-content">
                 <p><strong>Category:</strong> {recipe.category}</p>
                 <p><strong>Time:</strong> {recipe.time} min</p>
@@ -32,8 +29,8 @@ function RecipeDetails({ recipeId, setPage }) {
             </div>
 
             <Buttons
-                firstLabel="Back to recipes"
-                secondLabel="Delete recipe"
+                firstLabel="Back to Recipes"
+                secondLabel="Delete Recipe"
                 onClickFirst={() => setPage("recipes")}
                 onClickSecond={handleDelete}
             />
