@@ -15,25 +15,8 @@
     margin-bottom: 8px;
   }
 
-  &__back {
-    margin-bottom: 24px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #00bfff;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &__delete {
+  .buttons {
     margin-top: 24px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #ff6f61;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
+

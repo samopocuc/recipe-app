@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { deleteRecipe } from "../../services/api";
+import Buttons from "../Buttons/Buttons";
 import "./_recipedetails.scss";
 
 function RecipeDetails({ recipeId, setPage }) {
@@ -21,10 +22,6 @@ function RecipeDetails({ recipeId, setPage }) {
 
     return (
         <div className="recipe-details">
-            <p className="recipe-details__back" onClick={() => setPage("recipes")}>
-                ← Back to recipes
-            </p>
-
             <h1>{recipe.title}</h1>
 
             <p><strong>Category:</strong> {recipe.category}</p>
@@ -32,9 +29,12 @@ function RecipeDetails({ recipeId, setPage }) {
             <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
             <p><strong>Instructions:</strong> {recipe.instructions}</p>
 
-            <p className="recipe-details__delete" onClick={handleDelete}>
-                Delete recipe
-            </p>
+            <Buttons
+                firstLabel="Back to recipes"
+                secondLabel="Delete recipe"
+                onClickFirst={() => setPage("recipes")}
+                onClickSecond={handleDelete}
+            />
         </div>
     );
 }
