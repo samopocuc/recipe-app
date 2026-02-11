@@ -4,7 +4,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; // tekst na vrhu
+  justify-content: flex-start;
   align-items: center;
   background-image: url("../../assets/spices.jpg");
   background-size: cover;
@@ -19,16 +19,16 @@
     align-items: center;
     width: 100%;
     padding: 16px;
-    background-color: transparent; // brez bele polprosojne barve
+    background-color: transparent;
   }
 
   &__title {
-    color: #000; // tekst črn ali po izbiri
+    color: #000;
     text-transform: uppercase;
-    font-weight: 900; // maksimalno bold
+    font-weight: 900;
     font-size: 1.8rem;
     text-align: center;
-    margin-bottom: 24px; // razmik med naslovom in gumbi
+    margin-bottom: 24px;
   }
 
   .buttons {
@@ -49,7 +49,7 @@
     }
 
     .buttons {
-      flex-direction: row; // gumbi horizontalno
+      flex-direction: row;
       gap: 16px;
     }
   }
