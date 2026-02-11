@@ -1,22 +1,26 @@
 import { useEffect, useState } from "react";
 import { getRecipes } from "../../services/api";
 import RecipeCard from "../RecipeCard/RecipeCard";
-import "../RecipeCard/_recipecard.scss";
 import "./_recipelist.scss";
 
-function RecipeList() {
+function RecipeList({ setPage, setSelectedRecipeId }) {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        getRecipes()
-            .then(data => setRecipes(data))
-            .catch(err => console.error("Error fetching recipes:", err));
+        getRecipes().then(setRecipes);
     }, []);
 
     return (
         <div className="recipe-list">
             {recipes.map(recipe => (
-                <RecipeCard key={recipe.id} recipe={recipe} />
+                <RecipeCard
+                    key={recipe.id}
+                    recipe={recipe}
+                    onClick={() => {
+                        setSelectedRecipeId(recipe.id);
+                        setPage("details");
+                    }}
+                />
             ))}
         </div>
     );
