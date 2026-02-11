@@ -24,10 +24,12 @@ function RecipeDetails({ recipeId, setPage }) {
         <div className="recipe-details">
             <h1>{recipe.title}</h1>
 
-            <p><strong>Category:</strong> {recipe.category}</p>
-            <p><strong>Time:</strong> {recipe.time} min</p>
-            <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
-            <p><strong>Instructions:</strong> {recipe.instructions}</p>
+            <div className="recipe-content">
+                <p><strong>Category:</strong> {recipe.category}</p>
+                <p><strong>Time:</strong> {recipe.time} min</p>
+                <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
+                <p><strong>Instructions:</strong> {recipe.instructions}</p>
+            </div>
 
             <Buttons
                 firstLabel="Back to recipes"

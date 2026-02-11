@@ -11,17 +11,7 @@
     text-align: center;
   }
 
-  button {
-    margin-bottom: 16px;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    background-color: #ff6f61;
-    color: #fff;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #e55b50;
-    }
+  .buttons {
+    margin-bottom: 24px;
   }
 }

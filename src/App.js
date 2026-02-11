@@ -5,28 +5,25 @@ import AddRecipe from "./pages/AddRecipe/AddRecipe";
 import RecipeDetails from "./components/RecipeDetails/RecipeDetails";
 
 function App() {
-    const [page, setPage] = useState("home"); // home | recipes | add | details
+    const [page, setPage] = useState("home"); // "home", "recipes", "add", "details"
     const [selectedRecipeId, setSelectedRecipeId] = useState(null);
 
     return (
         <>
             {page === "home" && <Home setPage={setPage} />}
-
             {page === "recipes" && (
                 <RecipesPage
                     setPage={setPage}
                     setSelectedRecipeId={setSelectedRecipeId}
                 />
             )}
-
-            {page === "details" && (
+            {page === "add" && <AddRecipe setPage={setPage} />}
+            {page === "details" && selectedRecipeId && (
                 <RecipeDetails
                     recipeId={selectedRecipeId}
                     setPage={setPage}
                 />
             )}
-
-            {page === "add" && <AddRecipe setPage={setPage} />}
         </>
     );
 }
