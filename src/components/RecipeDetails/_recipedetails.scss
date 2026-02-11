@@ -1,0 +1,39 @@
+.recipe-details {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    max-width: 600px;
+    margin-bottom: 8px;
+  }
+
+  &__back {
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #00bfff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__delete {
+    margin-top: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ff6f61;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

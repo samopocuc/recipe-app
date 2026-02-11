@@ -17,3 +17,8 @@ export const addRecipe = (recipe) =>
             if (!res.ok) throw new Error("Failed to add recipe");
             return res.json();
         });
+
+export const deleteRecipe = (id) =>
+    fetch(`${API_URL}/${id}`, {
+        method: "DELETE"
+    });
