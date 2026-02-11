@@ -14,7 +14,10 @@ function App() {
             {page === "recipes" && (
                 <RecipesPage
                     setPage={setPage}
-                    setSelectedRecipeId={setSelectedRecipeId}
+                    onSelectRecipe={(id) => {
+                        setSelectedRecipeId(id);
+                        setPage("details");
+                    }}
                 />
             )}
             {page === "add" && <AddRecipe setPage={setPage} />}

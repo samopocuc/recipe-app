@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { getRecipes } from "../../services/api";
 import RecipeCard from "../RecipeCard/RecipeCard";
+import "../RecipeCard/_recipecard.scss";
 import "./_recipelist.scss";
 
-function RecipeList({ setPage, setSelectedRecipeId }) {
+function RecipeList({ onSelectRecipe }) {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -12,20 +13,18 @@ function RecipeList({ setPage, setSelectedRecipeId }) {
             .catch(err => console.error("Error fetching recipes:", err));
     }, []);
 
-    const handleCardClick = (id) => {
-        setSelectedRecipeId(id);
-        setPage("details");
-    };
-
     return (
         <div className="recipe-list">
             {recipes.map(recipe => (
-                <div key={recipe.id} onClick={() => handleCardClick(recipe.id)}>
-                    <RecipeCard recipe={recipe} />
-                </div>
+                <RecipeCard
+                    key={recipe.id}
+                    recipe={recipe}
+                    onClick={() => onSelectRecipe(recipe.id)}
+                />
             ))}
         </div>
     );
 }
 
 export default RecipeList;
+

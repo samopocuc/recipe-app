@@ -2,7 +2,7 @@ import RecipeList from "../../components/RecipeList/RecipeList";
 import Buttons from "../../components/Buttons/Buttons";
 import "./_recipespage.scss";
 
-function RecipesPage({ setPage, setSelectedRecipeId }) {
+function RecipesPage({ setPage, onSelectRecipe }) {
     return (
         <div className="recipes-page">
             <h1 className="recipes-page__title">All Recipes</h1>
@@ -11,13 +11,10 @@ function RecipesPage({ setPage, setSelectedRecipeId }) {
                 firstLabel="Back to Home"
                 secondLabel=""
                 onClickFirst={() => setPage("home")}
-                onClickSecond={null} // drugi gumb pustimo prazen
+                onClickSecond={() => {}}
             />
 
-            <RecipeList
-                setPage={setPage}
-                setSelectedRecipeId={setSelectedRecipeId}
-            />
+            <RecipeList onSelectRecipe={onSelectRecipe} />
         </div>
     );
 }
