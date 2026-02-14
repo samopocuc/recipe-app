@@ -19,7 +19,7 @@ function RecipeDetails({ recipeId, setPage }) {
     };
 
     return (
-        <div className="recipe-details">
+        <div className={`recipe-details ${recipe.category}`}>
             <h1>{recipe.title}</h1>
             <div className="recipe-content">
                 <p><strong>Category:</strong> {recipe.category}</p>
