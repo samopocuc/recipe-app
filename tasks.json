@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Pancakes",
       "category": "Breakfast",
       "time": 20,
@@ -9,7 +9,7 @@
       "instructions": "Mix ingredients and fry pancakes."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Omelette",
       "category": "Breakfast",
       "time": 10,
@@ -17,16 +17,15 @@
       "instructions": "Whisk eggs and cook with cheese."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Avocado Toast",
       "category": "Breakfast",
       "time": 5,
       "ingredients": "bread, avocado, salt",
       "instructions": "Toast bread and spread mashed avocado."
     },
-
     {
-      "id": 4,
+      "id": "4",
       "title": "Chicken Salad",
       "category": "Lunch",
       "time": 25,
@@ -34,7 +33,7 @@
       "instructions": "Grill chicken and mix with vegetables."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Spaghetti Bolognese",
       "category": "Lunch",
       "time": 40,
@@ -42,16 +41,15 @@
       "instructions": "Cook pasta and prepare meat sauce."
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Vegetable Stir Fry",
       "category": "Lunch",
       "time": 20,
       "ingredients": "mixed vegetables, soy sauce",
       "instructions": "Stir fry vegetables with soy sauce."
     },
-
     {
-      "id": 7,
+      "id": "7",
       "title": "Grilled Salmon",
       "category": "Dinner",
       "time": 30,
@@ -59,7 +57,7 @@
       "instructions": "Grill salmon with herbs."
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Steak with Potatoes",
       "category": "Dinner",
       "time": 45,
@@ -67,16 +65,15 @@
       "instructions": "Grill steak and roast potatoes."
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Chicken Curry",
       "category": "Dinner",
       "time": 35,
       "ingredients": "chicken, curry paste, coconut milk",
       "instructions": "Cook chicken with curry paste and coconut milk."
     },
-
     {
-      "id": 10,
+      "id": "10",
       "title": "Chocolate Cake",
       "category": "Dessert",
       "time": 60,
@@ -84,7 +81,7 @@
       "instructions": "Bake chocolate cake."
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Fruit Salad",
       "category": "Dessert",
       "time": 10,
@@ -92,7 +89,7 @@
       "instructions": "Mix fresh fruits."
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Cheesecake",
       "category": "Dessert",
       "time": 70,
