@@ -23,6 +23,7 @@
     margin-bottom: vars.$space-lg;
     text-align: center;
   }
+
   /* main form container */
   form {
     @include mix.flex-column(vars.$space-md);
@@ -60,9 +61,23 @@
       }
     }
 
+    /* buttons container */
     .form-buttons {
       margin-top: auto;
       @include mix.flex-row(vars.$space-sm, center, center);
+
+      /* all buttons same font and min-width */
+      button {
+        font-family: vars.$font-button-gf;
+        padding: 12px 20px;
+        min-width: 140px; // ensures uniform width
+        border: none;
+        border-radius: vars.$radius-sm;
+        color: vars.$header-text;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
 
       /* primary action button (Add Recipe) */
       button:first-child {
@@ -78,16 +93,6 @@
         &:hover {
           background-color: vars.$secondary-hover;
         }
-      }
-
-      button {
-        padding: 12px 20px;
-        border: none;
-        border-radius: vars.$radius-sm;
-        color: vars.$header-text;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
       }
     }
   }
@@ -108,4 +113,5 @@
     }
   }
 }
+
 

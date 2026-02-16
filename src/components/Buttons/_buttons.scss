@@ -15,6 +15,7 @@
     cursor: pointer;
     color: vars.$header-text; // white text from variables
     transition: background-color 0.2s ease;
+    min-width: 140px; // ensures both buttons are the same width on all screen sizes
   }
 
   /* red button */
@@ -35,10 +36,7 @@
 
   @include mix.respond-to(sm) {
     @include mix.flex-row(vars.$space-md, center, center); // switch to row on medium screens
-
-    button {
-      min-width: 140px;
-    }
   }
 }
+
 
