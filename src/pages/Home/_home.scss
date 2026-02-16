@@ -39,6 +39,7 @@
     }
   }
 
+  /* responsive adjustments for small screens */
   @include mix.respond-to(sm) {
     padding: vars.$space-lg;
 
@@ -48,6 +49,7 @@
     }
   }
 
+  /* responsive adjustments for medium/large screens */
   @include mix.respond-to(md) {
     padding: vars.$space-xl;
 
