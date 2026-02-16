@@ -1,3 +1,4 @@
+/* home page container */
 .home {
   position: relative;
   width: 100%;
@@ -13,6 +14,7 @@
   margin: 0;
   padding: 16px;
 
+  /* overlay for title and buttons */
   &__overlay {
     display: flex;
     flex-direction: column;
@@ -22,6 +24,7 @@
     background-color: transparent;
   }
 
+  /* main title styling */
   &__title {
     color: #000;
     text-transform: uppercase;
@@ -31,6 +34,7 @@
     margin-bottom: 24px;
   }
 
+  /* container for the buttons */
   .buttons {
     width: 100%;
     display: flex;
@@ -40,6 +44,7 @@
     align-items: center;
   }
 
+  /* responsive styles for medium screens */
   @media (min-width: 480px) {
     padding: 24px;
 
@@ -54,6 +59,7 @@
     }
   }
 
+  /* responsive styles for large screens */
   @media (min-width: 768px) {
     padding: 32px;
 

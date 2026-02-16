@@ -1,3 +1,4 @@
+/* main container for add recipe page */
 .add-recipe {
   min-height: 100vh;
   display: flex;
@@ -14,18 +15,21 @@
     background-repeat: no-repeat;
   }
 
+  /* page title styling */
   h1 {
     font-size: 2rem;
     margin-bottom: 24px;
     text-align: center;
   }
 
+  /* form container */
   form {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 500px;
 
+    /* common inputs/selects */
     input, select {
       padding: 10px;
       border-radius: 6px;
@@ -36,6 +40,7 @@
       box-sizing: border-box;
     }
 
+    /* textareas for ingredients & instructions */
     textarea {
       padding: 10px;
       border-radius: 6px;
@@ -55,6 +60,7 @@
       }
     }
 
+    /* form buttons container */
     .form-buttons {
       margin-top: auto;
       display: flex;
@@ -64,6 +70,7 @@
       align-items: center;
     }
 
+    /* add/save button styling */
     .form-buttons button:first-child {
       background-color: #00bfff;
 
@@ -72,6 +79,7 @@
       }
     }
 
+    /* back button styling */
     .form-buttons button:last-child {
       background-color: #ff6f61;
 
@@ -80,6 +88,7 @@
       }
     }
 
+    /* common button styling */
     button {
       padding: 12px 20px;
       border: none;
@@ -91,6 +100,7 @@
     }
   }
 
+  /* responsive layout for small screens */
   @media (min-width: 480px) {
     padding: 24px;
 
@@ -99,6 +109,7 @@
     }
   }
 
+  /* responsive layout for medium+ screens */
   @media (min-width: 768px) {
     padding: 32px;
 
