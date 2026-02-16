@@ -7,6 +7,7 @@
 
   /* common style for all buttons */
   button {
+    font-family: vars.$font-button-gf; // button font
     padding: 12px 20px;
     font-size: 1rem;
     border: none;
@@ -40,3 +41,4 @@
     }
   }
 }
+

@@ -25,7 +25,9 @@
 
   &__title {
     @include mix.heading(1.8rem);
-    color: #000;
+    font-family: vars.$font-heading-gf;
+    font-weight: 900;
+    color: vars.$header-text;
     text-align: center;
     margin-bottom: vars.$space-lg;
   }
@@ -44,7 +46,10 @@
     padding: vars.$space-lg;
 
     &__title {
-      font-size: 2.2rem;
+      font-size: 4.2rem;
+      font-family: vars.$font-heading-gf;
+      font-weight: 900;
+      color: vars.$header-text;
       margin-bottom: vars.$space-xl;
     }
   }
@@ -54,7 +59,10 @@
     padding: vars.$space-xl;
 
     &__title {
-      font-size: 2.5rem;
+      font-size: 4.2rem;
+      font-family: vars.$font-heading-gf;
+      font-weight: 900;
+      color: vars.$header-text;
       margin-bottom: 40px;
     }
   }

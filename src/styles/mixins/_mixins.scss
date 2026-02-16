@@ -1,3 +1,5 @@
+@use "../../styles/general/variables" as vars;
+
 /* centers content horizontally and vertically */
 @mixin flex-center {
   display: flex;
@@ -45,6 +47,7 @@
 
 /* reusable heading style */
 @mixin heading($size: 2rem, $weight: 900, $transform: uppercase) {
+  font-family: vars.$font-heading-gf;
   font-size: $size;
   font-weight: $weight;
   text-transform: $transform;
