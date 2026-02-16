@@ -1,16 +1,19 @@
+@use "../../styles/general/variables" as vars;
+@use "../../styles/mixins/mixins" as mix;
+
 /* recipe card container */
 .recipe-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  width: 90%;  /* width and max width */
+  background-color: vars.$card-bg; // card background from variables
+  border-radius: vars.$radius-md; // rounded corners
+  padding: vars.$space-md; // spacing from variables
+  margin: vars.$space-sm;
+  width: 90%;  // width and max width
   max-width: 260px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: vars.$shadow-light; // shadow from variables
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
 
-  color: #fff;
+  color: vars.$header-text; // text color from variables
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,8 +23,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
+    background: vars.$overlay-color; // overlay color from variables
+    border-radius: vars.$radius-md;
   }
 
   /* make content above overlay */
@@ -32,19 +35,18 @@
 
   /* recipe title spacing */
   h3 {
-    margin-bottom: 8px;
+    margin-bottom: vars.$space-sm;
   }
 
   /* paragraph spacing */
   p {
-    margin: 4px 0;
+    margin: vars.$space-xs 0;
   }
-
 
   /* hover effect for lift and shadow */
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: vars.$shadow-medium; // bigger shadow on hover
     cursor: pointer;
   }
 
@@ -55,12 +57,12 @@
   }
 
   &.Lunch {
-    border-left: 5px solid #00bfff;
+    border-left: 5px solid vars.$primary-color;
     background-image: url("../../assets/Lunch.jpg");
   }
 
   &.Dinner {
-    border-left: 5px solid #ff6f61;
+    border-left: 5px solid vars.$secondary-color;
     background-image: url("../../assets/Dinner.jpg");
   }
 
@@ -70,7 +72,7 @@
   }
 
   /* card width for larger screens */
-  @media (min-width: 768px) {
+  @include mix.respond-to(md) {
     width: 250px;
   }
 }
