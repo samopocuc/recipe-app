@@ -1,9 +1,11 @@
+/* osnovni flex layout za gumbe */
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 
+  /* skupni stil za vse gumbe */
   button {
     padding: 12px 20px;
     font-size: 1rem;
@@ -14,15 +16,17 @@
     transition: background-color 0.2s ease;
   }
 
+  /* rdeč gumb */
   .first-btn {
-    background-color: #ff6f61; // rdečkasto
+    background-color: #ff6f61;
     &:hover {
       background-color: #e55b50;
     }
   }
 
+  /* moder gumb */
   .second-btn {
-    background-color: #00bfff; // modro
+    background-color: #00bfff;
     &:hover {
       background-color: #0099cc;
     }
