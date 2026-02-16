@@ -1,6 +1,10 @@
+@use "../../styles/general/variables" as vars;
+@use "../../styles/mixins/mixins" as mix;
+
+/* container for recipe cards - flex layout */
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px;
+  gap: vars.$space-md;
 }
