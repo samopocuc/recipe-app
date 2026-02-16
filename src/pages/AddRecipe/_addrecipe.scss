@@ -1,54 +1,53 @@
+@use "../../styles/general/variables" as vars;
+@use "../../styles/mixins/mixins" as mix;
+
 /* main container for add recipe page */
 .add-recipe {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
+
+  @include mix.flex-column(vars.$space-md, flex-start, center);
+
+  padding: vars.$space-md;
   position: relative;
-  color: #fff;
+  color: vars.$header-text;
 
   &.dark-bg {
-    background-color: #1a1a1a;
+    background-color: vars.$dark-bg;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  /* page title styling */
   h1 {
-    font-size: 2rem;
-    margin-bottom: 24px;
+    @include mix.heading(2rem);
+    margin-bottom: vars.$space-lg;
     text-align: center;
   }
 
-  /* form container */
   form {
-    display: flex;
-    flex-direction: column;
+    @include mix.flex-column(vars.$space-md);
     width: 100%;
     max-width: 500px;
 
-    /* common inputs/selects */
-    input, select {
-      padding: 10px;
-      border-radius: 6px;
+    input,
+    select {
+      padding: vars.$space-sm;
+      border-radius: vars.$radius-sm;
       border: 1px solid #ccc;
       font-size: 1rem;
-      margin-bottom: 12px;
+      margin-bottom: vars.$space-md;
       width: 100%;
       box-sizing: border-box;
     }
 
-    /* textareas for ingredients & instructions */
     textarea {
-      padding: 10px;
-      border-radius: 6px;
+      padding: vars.$space-sm;
+      border-radius: vars.$radius-sm;
       border: 1px solid #ccc;
       font-size: 1rem;
       width: 100%;
       box-sizing: border-box;
-      margin-bottom: 12px;
+      margin-bottom: vars.$space-md;
       resize: none;
 
       &.ingredients {
@@ -60,61 +59,50 @@
       }
     }
 
-    /* form buttons container */
     .form-buttons {
       margin-top: auto;
-      display: flex;
-      flex-direction: row;
-      gap: 12px;
-      justify-content: center;
-      align-items: center;
-    }
+      @include mix.flex-row(vars.$space-sm, center, center);
 
-    /* add/save button styling */
-    .form-buttons button:first-child {
-      background-color: #00bfff;
-
-      &:hover {
-        background-color: #0099cc;
+      button:first-child {
+        background-color: vars.$primary-color;
+        &:hover {
+          background-color: vars.$primary-hover;
+        }
       }
-    }
 
-    /* back button styling */
-    .form-buttons button:last-child {
-      background-color: #ff6f61;
-
-      &:hover {
-        background-color: #e55b50;
+      button:last-child {
+        background-color: vars.$secondary-color;
+        &:hover {
+          background-color: vars.$secondary-hover;
+        }
       }
-    }
 
-    /* common button styling */
-    button {
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      color: #fff;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
+      button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: vars.$radius-sm;
+        color: vars.$header-text;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
     }
   }
 
-  /* responsive layout for small screens */
-  @media (min-width: 480px) {
-    padding: 24px;
+  @include mix.respond-to(sm) {
+    padding: vars.$space-lg;
 
     h1 {
       font-size: 2.5rem;
     }
   }
 
-  /* responsive layout for medium+ screens */
-  @media (min-width: 768px) {
-    padding: 32px;
+  @include mix.respond-to(md) {
+    padding: vars.$space-xl;
 
     h1 {
       font-size: 3rem;
     }
   }
 }
+
