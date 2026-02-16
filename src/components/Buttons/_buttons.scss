@@ -1,39 +1,39 @@
+@use "../../styles/general/variables" as vars;
+@use "../../styles/mixins/mixins" as mix;
+
 /* basic flex layout for buttons */
 .buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
+  @include mix.flex-column(vars.$space-md, center, center); // flex column layout with gap
 
   /* common style for all buttons */
   button {
     padding: 12px 20px;
     font-size: 1rem;
     border: none;
-    border-radius: 6px;
+    border-radius: vars.$radius-sm; // using variables
     cursor: pointer;
-    color: #fff;
+    color: vars.$header-text; // white text from variables
     transition: background-color 0.2s ease;
   }
 
   /* red button */
   .first-btn {
-    background-color: #ff6f61;
+    background-color: vars.$secondary-color;
     &:hover {
-      background-color: #e55b50;
+      background-color: vars.$secondary-hover;
     }
   }
 
   /* blue button */
   .second-btn {
-    background-color: #00bfff;
+    background-color: vars.$primary-color;
     &:hover {
-      background-color: #0099cc;
+      background-color: vars.$primary-hover;
     }
   }
 
-  @media (min-width: 480px) {
-    flex-direction: row;
+  @include mix.respond-to(sm) {
+    @include mix.flex-row(vars.$space-md, center, center); // switch to row on medium screens
 
     button {
       min-width: 140px;
