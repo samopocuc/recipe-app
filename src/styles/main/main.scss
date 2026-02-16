@@ -1,4 +1,4 @@
-@use "../general/reset";      // globalni reset
-@use "./_main";               // container, recipe-list, header
-@use "../general/variables";  // spremenljivke
-@use "../mixins/mixins";      // mixine
+@use 'scss-reset';
+@use "./_main";
+@use "../general/variables";
+@use "../mixins/mixins";
