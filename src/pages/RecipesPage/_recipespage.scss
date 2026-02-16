@@ -1,27 +1,29 @@
+@use "../../styles/general/variables" as vars;
+
 /* main container for all recipes page */
 .recipes-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px;
-  background-color: #121212;
+  padding: vars.$space-md;
+  background-color: vars.$dark-bg;
 
   /* page title */
   &__title {
     font-size: 2rem;
-    margin-bottom: 16px;
+    margin-bottom: vars.$space-lg;
     text-align: center;
-    color: #fff;
+    color: vars.$header-text;
   }
 
   /* container for navigation buttons */
   .buttons {
-    margin-bottom: 16px;
+    margin-bottom: vars.$space-lg;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: vars.$space-sm;
     justify-content: center;
     align-items: center;
   }
@@ -31,36 +33,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: vars.$space-sm;
     width: 100%;
   }
 
   /* medium screen responsive adjustments */
   @media (min-width: 480px) {
-    padding: 24px;
+    padding: vars.$space-lg;
 
     &__title {
       font-size: 2.2rem;
-      margin-bottom: 24px;
+      margin-bottom: vars.$space-xl;
     }
 
     .buttons {
       flex-direction: row;
-      gap: 16px;
+      gap: vars.$space-md;
     }
 
     .recipe-list {
-      gap: 16px;
+      gap: vars.$space-md;
     }
   }
 
   /* large screen responsive adjustments */
   @media (min-width: 768px) {
-    padding: 32px;
+    padding: vars.$space-xl;
 
     &__title {
       font-size: 2.5rem;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
     }
 
     .buttons {
@@ -72,3 +74,4 @@
     }
   }
 }
+
