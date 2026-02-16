@@ -1,5 +1,51 @@
-@mixin center {
+/* centers content horizontally and vertically */
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* flex row layout with optional gap and alignment */
+@mixin flex-row($gap: 12px, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+/* flex column layout with optional gap and alignment */
+@mixin flex-column($gap: 12px, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+/* reusable shadow mixin */
+@mixin shadow($type: light) {
+  @if $type == light {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  } @else if $type == medium {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+}
+
+/* media query mixin for responsive design */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 480px) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: 1024px) { @content; }
+  }
+}
+
+/* reusable heading style */
+@mixin heading($size: 2rem, $weight: 900, $transform: uppercase) {
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $transform;
 }
